@@ -13,7 +13,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 /**
- * TODO
  * author : 马世豪 29350
  * time   : 2018/11/18
  * version: 1.0
@@ -24,7 +23,7 @@ public class LogServiceUtil {
     private static final String TAG = "MSH";
     private static int PORT = 2017;
 
-    private static final String ip = "192.168.3.5";
+    private static final String ip = "192.168.5.224";
 
     private LogServiceUtil() {
     }

@@ -58,6 +58,7 @@ class App : MultiDexApplication() {
         AutoDensityUtil.init()
 //        StompClientUtil.init()
         LogServiceUtil.connect()
+        registerActivityLifecycleCallbacks(AppActivityListener())
 
     }
 

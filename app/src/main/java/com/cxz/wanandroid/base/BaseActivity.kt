@@ -183,6 +183,7 @@ abstract class BaseActivity : AppCompatActivity() {
         var iv_develop: ImageView? = null
         iv_develop = mDevelopTool.findViewById(R.id.iv_develop)
         iv_develop.setOnClickListener {
+//            ActivityStack.getInstance().popAllActivity()
             Intent(this, DevelopAct::class.java).run {
                 startActivity(this)
             }

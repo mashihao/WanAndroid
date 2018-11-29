@@ -20,11 +20,13 @@ import com.cxz.wanandroid.event.ColorEvent
 import com.cxz.wanandroid.event.LoginEvent
 import com.cxz.wanandroid.event.RefreshHomeEvent
 import com.cxz.wanandroid.ext.showToast
+import com.cxz.wanandroid.ui.activity.MainActivity.Companion.UNFINISH_FLAG
 import com.cxz.wanandroid.ui.fragment.HomeFragment
 import com.cxz.wanandroid.ui.fragment.KnowledgeTreeFragment
 import com.cxz.wanandroid.ui.fragment.NavigationFragment
 import com.cxz.wanandroid.ui.fragment.ProjectFragment
 import com.cxz.wanandroid.ui.setting.SettingActivity
+import com.cxz.wanandroid.utils.ActivityStack
 import com.cxz.wanandroid.utils.DialogUtil
 import com.cxz.wanandroid.utils.Preference
 import com.cxz.wanandroid.utils.SettingUtil
@@ -38,7 +40,11 @@ import org.greenrobot.eventbus.ThreadMode
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 
+@ActivityStack.UnFinishActivity(UNFINISH_FLAG)
 class MainActivity : BaseActivity() {
+    companion object {
+        const val UNFINISH_FLAG = "MainActivityFlag"
+    }
 
     private val FRAGMENT_HOME = 0x01
     private val FRAGMENT_KNOWLEDGE = 0x02
