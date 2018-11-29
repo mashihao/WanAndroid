@@ -113,13 +113,12 @@ abstract class BaseActivity : AppCompatActivity() {
         }
         initData()
         initTipView()
-        initDevelopTool()
         initContentView()
+        initDevelopTool()
         initView()
         start()
         initListener()
 
-        contentView.addView(mDevelopTool, mLayoutParams2)
     }
 
 
@@ -183,15 +182,17 @@ abstract class BaseActivity : AppCompatActivity() {
         var iv_develop: ImageView? = null
         iv_develop = mDevelopTool.findViewById(R.id.iv_develop)
         iv_develop.setOnClickListener {
-//            ActivityStack.getInstance().popAllActivity()
             Intent(this, DevelopAct::class.java).run {
                 startActivity(this)
             }
-
         }
         iv_develop.setOnLongClickListener {
             Toast.makeText(this, javaClass.simpleName, Toast.LENGTH_SHORT).show()
             true
+        }
+        val b = this.javaClass.isAnnotationPresent(DevelopHelp.UnDevelopActivity::class.java)
+        if (!b) {
+            contentView.addView(mDevelopTool, mLayoutParams2)
         }
     }
 

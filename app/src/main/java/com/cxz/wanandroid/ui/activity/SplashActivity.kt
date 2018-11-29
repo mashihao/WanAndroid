@@ -5,8 +5,9 @@ import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import com.cxz.wanandroid.R
 import com.cxz.wanandroid.base.BaseActivity
+import com.cxz.wanandroid.utils.DevelopHelp
 import kotlinx.android.synthetic.main.activity_splash.*
-
+@DevelopHelp.UnDevelopActivity
 class SplashActivity : BaseActivity() {
 
     private var alphaAnimation: AlphaAnimation? = null

@@ -26,10 +26,7 @@ import com.cxz.wanandroid.ui.fragment.KnowledgeTreeFragment
 import com.cxz.wanandroid.ui.fragment.NavigationFragment
 import com.cxz.wanandroid.ui.fragment.ProjectFragment
 import com.cxz.wanandroid.ui.setting.SettingActivity
-import com.cxz.wanandroid.utils.ActivityStack
-import com.cxz.wanandroid.utils.DialogUtil
-import com.cxz.wanandroid.utils.Preference
-import com.cxz.wanandroid.utils.SettingUtil
+import com.cxz.wanandroid.utils.*
 import com.cxz.wanandroid.widget.helper.BottomNavigationViewHelper
 import com.tencent.bugly.beta.Beta
 import kotlinx.android.synthetic.main.activity_main.*
@@ -39,6 +36,7 @@ import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
+
 
 @ActivityStack.UnFinishActivity(UNFINISH_FLAG)
 class MainActivity : BaseActivity() {

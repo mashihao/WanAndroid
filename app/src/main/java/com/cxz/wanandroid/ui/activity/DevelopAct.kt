@@ -4,8 +4,9 @@ import android.widget.Button
 import android.widget.Toast
 import com.cxz.wanandroid.R
 import com.cxz.wanandroid.base.BaseActivity
+import com.cxz.wanandroid.utils.DevelopHelp
 import com.cxz.wanandroid.utils.LogServiceUtil
-
+@DevelopHelp.UnDevelopActivity
 class DevelopAct : BaseActivity() {
 
 
