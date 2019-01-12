@@ -18,10 +18,10 @@ class DevelopAct : BaseActivity() {
     }
 
     override fun initView() {
+        //重新链接， 重连机制
         var reconnect: Button? = null
         reconnect = findViewById(R.id.reconnnect)
         reconnect.setOnClickListener {
-            Toast.makeText(this, "fdsfds", Toast.LENGTH_SHORT).show()
             LogServiceUtil.connect()
         }
     }

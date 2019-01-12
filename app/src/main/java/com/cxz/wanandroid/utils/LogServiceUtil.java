@@ -23,7 +23,7 @@ public class LogServiceUtil {
     private static final String TAG = "MSH";
     private static int PORT = 2017;
 
-    private static final String ip = "192.168.5.224";
+    private static final String ip = "192.168.3.34";
 
     private LogServiceUtil() {
     }

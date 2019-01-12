@@ -9,8 +9,10 @@ import android.support.multidex.MultiDexApplication
 import android.support.v7.app.AppCompatDelegate
 import android.util.Log
 import com.cxz.wanandroid.BuildConfig
+import com.cxz.wanandroid.calback.*
 import com.cxz.wanandroid.constant.Constant
 import com.cxz.wanandroid.utils.*
+import com.kingja.loadsir.core.LoadSir
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
 import com.orhanobut.logger.PrettyFormatStrategy
@@ -59,6 +61,14 @@ class App : MultiDexApplication() {
 //        StompClientUtil.init()
         LogServiceUtil.connect()
         registerActivityLifecycleCallbacks(AppActivityListener())
+        LoadSir.beginBuilder()
+                .addCallback(ErrorCallback())
+                .addCallback(EmptyCallback())
+                .addCallback(LoadingCallback())
+                .addCallback(TimeoutCallback())
+                .addCallback(CustomCallback())
+                .setDefaultCallback(LoadingCallback::class.java!!)
+                .commit()
 
     }
 
