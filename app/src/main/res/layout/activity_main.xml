@@ -12,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <include layout="@layout/toolbar" />
+
 
         <include layout="@layout/container" />
 
@@ -29,7 +31,6 @@
             app:itemTextColor="@drawable/nav_item_color_state"
             app:layout_behavior="com.cxz.wanandroid.widget.behavior.BottomNavigationBehavior"
             app:menu="@menu/bottom_navigation_main" />
-
 
         <TextView
             android:visibility="gone"
