@@ -11,7 +11,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.*
-import android.widget.*
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.RelativeLayout
+import android.widget.Toast
 import com.afollestad.materialdialogs.color.CircleView
 import com.cxz.multiplestatusview.MultipleStatusView
 import com.cxz.wanandroid.R
@@ -70,10 +73,6 @@ abstract class BaseActivity : AppCompatActivity() {
         val root_view = LinearLayout(this)
         root_view.orientation = LinearLayout.VERTICAL
         root_view.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
-        val button = Button(this)
-        button.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-        button.text = "helllo"
-        root_view.addView(button)
         val content = View.inflate(this, attachLayoutRes(), null)
         content.layoutParams = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
         root_view.addView(content)
