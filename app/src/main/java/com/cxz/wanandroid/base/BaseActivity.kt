@@ -69,11 +69,24 @@ abstract class BaseActivity : AppCompatActivity() {
     protected lateinit var contentView: ViewGroup
 
 
-    fun soveLayoutRes():View {
+    fun soveLayoutRes(): View {
+        // 外层包裹，xml 布局
         val root_view = LinearLayout(this)
         root_view.orientation = LinearLayout.VERTICAL
         root_view.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
-        val content = View.inflate(this, attachLayoutRes(), null)
+
+
+        var ContentView = this.javaClass.getAnnotation(ContentView::class.java)
+
+        var content: View
+
+        if (ContentView != null) {
+            content = View.inflate(this, ContentView.value, null)
+        } else {
+            //真实的view ，xml中定义的界面
+            content = View.inflate(this, attachLayoutRes(), null)
+        }
+
         content.layoutParams = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
         root_view.addView(content)
         setContentView(root_view)
